@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # League One ETL Pipeline
 ## Project Overview
 
@@ -18,3 +19,7 @@ The database can be queried directly for analysis, visualization, or as a data s
 ## Future Improvements
 
 Currently, the pipeline focuses on upcoming fixtures only, but it can easily be extended to include historical data, league standings, match results, or additional leagues.
+=======
+# data-engineering-projects
+Portfolio of data engineering.
+>>>>>>> 0898d1d90b7d1b6c6170fc42af4d30f24415df33

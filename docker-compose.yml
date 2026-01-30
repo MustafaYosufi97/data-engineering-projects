@@ -22,9 +22,10 @@ services:
       AIRFLOW__CORE__LOAD_EXAMPLES: 'False'
       AIRFLOW__CORE__DAGS_ARE_PAUSED_AT_CREATION: 'True'
     volumes:
-      - C:/Users/musta/Desktop/FETCH_MATCHES_TO_SQL/dags:/opt/airflow/dags
-      - C:/Users/musta/Desktop/FETCH_MATCHES_TO_SQL/etl:/opt/airflow/etl
-      - C:/Users/musta/Desktop/FETCH_MATCHES_TO_SQL/data:/opt/airflow/data
+      - ./dags:/opt/airflow/dags
+      - ./etl:/opt/airflow/etl
+      - ./data:/opt/airflow/data
+
     ports:
       - "8080:8080"
     command: >
@@ -43,9 +44,10 @@ services:
       AIRFLOW__CORE__EXECUTOR: LocalExecutor
       AIRFLOW__CORE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres/airflow
     volumes:
-      - C:/Users/musta/Desktop/FETCH_MATCHES_TO_SQL/dags:/opt/airflow/dags
-      - C:/Users/musta/Desktop/FETCH_MATCHES_TO_SQL/etl:/opt/airflow/etl
-      - C:/Users/musta/Desktop/FETCH_MATCHES_TO_SQL/data:/opt/airflow/data
+      - ./dags:/opt/airflow/dags
+      - ./etl:/opt/airflow/etl
+      - ./data:/opt/airflow/data
+
     command: airflow scheduler
 
 volumes:
